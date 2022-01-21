@@ -22,7 +22,13 @@
         "test:ci": "lerna run lint && jest --ci --coverage --coverageReporters lcovonly && cat ./coverage/lcov.info | coveralls",
         "test:watch": "jest --watch",
         "lerna": "lerna",
+        "commit": "git-cz",
         "prepare": "husky install"
+    },
+    "config": {
+        "commitizen": {
+            "path": "@commitlint/cz-commitlint"
+        }
     },
     "devDependencies": {
         "@babel/cli": "^7.16.0",
@@ -30,8 +36,9 @@
         "@babel/polyfill": "^7.0.0",
         "@babel/preset-env": "^7.16.4",
         "@babel/preset-react": "^7.16.0",
-        "@commitlint/cli": "^15.0.0",
-        "@commitlint/config-conventional": "^15.0.0",
+        "@commitlint/cli": "^16.1.0",
+        "@commitlint/config-conventional": "^16.0.0",
+        "@commitlint/cz-commitlint": "^16.1.0",
         "@testing-library/dom": "^7.30.3",
         "@testing-library/jest-dom": "^4.2.3",
         "@testing-library/react": "^9.3.1",
@@ -39,6 +46,7 @@
         "babel-eslint": "^9.0.0",
         "babel-jest": "^24.0.0",
         "case": "^1.5.5",
+        "commitizen": "^4.2.4",
         "coveralls": "^3.0.2",
         "enzyme": "^3.7.0",
         "enzyme-adapter-react-16": "^1.7.0",
